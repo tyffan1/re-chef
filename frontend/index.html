@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Re-Chef MVP</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Re-Chef</h1>
+    <p>Минималистичный интерфейс для управления продуктами и рецептами.</p>
+
+    <section>
+      <h2>Добавить продукт</h2>
+      <form id="add-item-form">
+        <input type="text" id="name" placeholder="Название" required />
+        <input type="number" id="quantity" placeholder="Количество" min="0.1" step="0.1" value="1" required />
+        <input type="text" id="unit" placeholder="Ед. изм." value="шт" />
+        <input type="date" id="added_date" required />
+        <input type="date" id="expiry_date" required />
+        <button type="submit">Добавить</button>
+      </form>
+      <div id="add-item-result" class="info"></div>
+    </section>
+
+    <section>
+      <h2>Продукты</h2>
+      <button id="load-items" type="button">Обновить список</button>
+      <button id="load-expiring" type="button">Скоро истекают</button>
+      <ul id="items-list" class="list"></ul>
+    </section>
+
+    <section>
+      <h2>Рецепт</h2>
+      <button id="load-recipe" type="button">Сгенерировать рецепт из продуктов с коротким сроком</button>
+      <div id="recipe" class="card"></div>
+    </section>
+
+    <section>
+      <h2>Уведомления</h2>
+      <button id="load-notifications" type="button">Показать уведомления</button>
+      <ul id="notifications" class="list"></ul>
+    </section>
+
+    <section>
+      <h2>Чат с ChatGPT</h2>
+      <div id="chat-messages" class="chat-messages"></div>
+      <form id="chat-form">
+        <textarea id="chat-input" placeholder="Например: что приготовить из молока, яиц и помидоров?" rows="4" required></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+      <div id="chat-status" class="info"></div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

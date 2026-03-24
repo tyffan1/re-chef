@@ -1,0 +1,24 @@
+* { box-sizing: border-box; }
+body { font-family: Inter, sans-serif; margin: 0; background: #f8f8f8; color: #111; }
+.container { max-width: 760px; margin: 16px auto; padding: 16px; }
+h1 { margin-bottom: .3em; color: #111; text-align: center; }
+section { background: #ffffff; border: 1px solid #ccc; border-radius: 14px; padding: 18px; margin-bottom: 16px; box-shadow: 0 0 0 0 rgba(0,0,0,0); transition: box-shadow .25s ease, transform .25s ease; }
+section:hover { box-shadow: 0 6px 20px rgba(0,0,0,.08); transform: translateY(-2px); }
+form { display: grid; gap: 10px; }
+input, button { padding: 11px 12px; border: 1px solid #999; border-radius: 8px; transition: border-color .2s ease, box-shadow .2s ease, background-color .2s ease, transform .2s ease; }
+textarea { padding: 11px 12px; border: 1px solid #999; border-radius: 8px; transition: border-color .2s ease, box-shadow .2s ease, background-color .2s ease, transform .2s ease; width: 100%; resize: vertical; font: inherit; }
+input:focus { outline: none; border-color: #444; box-shadow: 0 0 0 3px rgba(0,0,0,.1); }
+textarea:focus { outline: none; border-color: #444; box-shadow: 0 0 0 3px rgba(0,0,0,.1); }
+button { background: #000; color: #fff; cursor: pointer; border: 1px solid #000; }
+button:hover { background: #333; transform: translateY(-1px); }
+button:active { transform: translateY(0); }
+.list { list-style: none; padding-left: 0; margin: 0; }
+.list li { padding: 10px 12px; border-bottom: 1px solid #ddd; transition: background .25s ease; }
+.list li:hover { background: #f2f2f2; }
+.card { padding: 10px 12px; background: #fafafa; color: #111; border-radius: 10px; border: 1px solid #d3d3d3; box-shadow: 0 2px 6px rgba(0,0,0,.05); transition: transform .2s ease; }
+.card:hover { transform: translateY(-1px); }
+.info { margin-top: 8px; color: #222; }
+.chat-messages { display: grid; gap: 10px; margin-bottom: 12px; }
+.chat-message { padding: 12px; border-radius: 12px; border: 1px solid #ddd; background: #f6f6f6; white-space: pre-wrap; }
+.chat-message.user { background: #111; color: #fff; border-color: #111; }
+.chat-message.assistant { background: #fafafa; color: #111; }
